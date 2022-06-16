@@ -19,7 +19,7 @@ export default function Countdown({route,navigation}) {
             headerTitle: () => (
                 <View style={[globalStyles.one_line_view]}>
                     <Text
-                        style={[globalStyles.header_name_habit, { textAlign: 'left', width: '82%' }]}
+                        style={[globalStyles.header_name_habit, { textAlign: 'left', width: '100%' }]}
 
                     >{route.params.habitData.name}</Text>
                 </View>
@@ -69,6 +69,7 @@ export default function Countdown({route,navigation}) {
                             params: { dataChange: !isHabitChange },
                             merge: true,
                         });
+                        alert(`Congratulations!!! You have done ${route.params.habitData.name}`);
                     }
                     }
                 >
@@ -105,6 +106,8 @@ export default function Countdown({route,navigation}) {
                 <Text style={{
                     backgroundColor: colors.buttonBackground,
                     padding: 10,
+                    paddingRight:30,
+                    paddingLeft:30,
                     borderRadius: 25,
                     color: colors.textButtonBackground,
                     fontFamily: 'Nunito-Sans-Bold',

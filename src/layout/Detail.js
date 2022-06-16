@@ -127,7 +127,7 @@ export default function Detail({ route, navigation}) {
                                     params: { dataChange: !isHabitChange },
                                     merge: true,
                                 })
-                                console.log(true);
+                                alert(`Congratulations!!! You have done ${route.params.habitData.name}`);
                             }}>
                                 <Text style={{ color: colors.componentBackground, fontSize: 25, marginTop: -10, }}>COMPLETE</Text>
 
